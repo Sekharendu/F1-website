@@ -13,11 +13,17 @@ import {useEffect, useState} from "react"
   const[heroCount,setHeroCount]=useState(0);
   const[playStatus,setPlayStatus]=useState(false);
 
-  useEffect(()=>{
-    setInterval(()=>{
-      setHeroCount((count)=>{return count===3?0:count+1;})
-    },3000);
-  },[]);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setHeroCount((count) => {
+        return count === 3 ? 0 : count + 1;
+      });
+    }, 3000);
+  
+    // Cleanup function to clear the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, []);
+  
   return (
     <div>
     <Background playStatus={playStatus} heroCount={heroCount}/>
