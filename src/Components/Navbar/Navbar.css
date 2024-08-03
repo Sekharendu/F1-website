@@ -1,0 +1,26 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:20px 90px;
+    color:white;
+}
+.nav_logo{
+    font-family: Outfit;
+    font-size:32px;
+    font-weight:500px;
+}
+.nav-menu{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    font-size:18px ;
+    gap:60px;
+}
+.nav-home{
+    border-radius: 50px;
+    padding:8px 25px;
+    background:#fff;
+    color:#262626;
+
+}
